@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", system-ui, sans-serif;
+  
+  /* Soft feminine colors */
+  --color-primary-50: #fdf2f8; /* pink-50 */
+  --color-primary-100: #fce7f3; /* pink-100 */
+  --color-primary-200: #fbcfe8; /* pink-200 */
+  --color-primary-300: #f9a8d4; /* pink-300 */
+  --color-primary-400: #f472b6; /* pink-400 */
+  --color-primary-500: #ec4899; /* pink-500 */
+  --color-primary-600: #db2777; /* pink-600 */
+  
+  --color-accent-50: #faf5ff; /* fuchsia-50 */
+  --color-accent-100: #f3e8ff; /* fuchsia-100 */
+  --color-accent-500: #a855f7; /* fuchsia-500 */
+  
+  /* Text colors - dark slate for contrast */
+  --color-text-main: #334155;
+  --color-text-muted: #64748b;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: 'Outfit', system-ui, sans-serif;
+  
+  /* Very soft, elegant gradient background */
+  background-color: #fdf2f8;
+  background-image: radial-gradient(at 0% 0%, #fff1f2 0px, transparent 50%),
+                    radial-gradient(at 100% 0%, #f3e8ff 0px, transparent 50%),
+                    radial-gradient(at 100% 100%, #fce7f3 0px, transparent 50%),
+                    radial-gradient(at 0% 100%, #faf5ff 0px, transparent 50%);
+  background-attachment: fixed;
+  
+  color: var(--color-text-main);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Glassmorphism utilities */
+.glass {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 8px 32px 0 rgba(236, 72, 153, 0.05);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 1);
+  box-shadow: 0 10px 40px -10px rgba(219, 39, 119, 0.08);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #fdf2f8;
+}
+::-webkit-scrollbar-thumb {
+  background: #fbcfe8;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #f472b6;
+}
